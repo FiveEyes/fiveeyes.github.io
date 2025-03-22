@@ -1,0 +1,63 @@
+---
+---
+
+@import "minima";
+
+// 自定义样式
+body {
+  font-family: 'Noto Sans SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.site-header {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 55.95px;
+  background-color: #f8f8f8;
+}
+
+.site-title {
+  font-weight: bold;
+}
+
+.post-link {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.post-meta {
+  color: #828282;
+}
+
+.post-content h2 {
+  font-size: 28px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 5px;
+}
+
+.post-content h3 {
+  font-size: 22px;
+}
+
+code {
+  background-color: #f0f0f0;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+
+pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.footer-col-wrapper {
+  color: #828282;
+  font-size: 15px;
+  margin-left: -15px;
+}

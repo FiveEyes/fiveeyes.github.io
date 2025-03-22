@@ -1,0 +1,27 @@
+# Site settings
+title: 我的博客
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  欢迎来到我的个人博客，这里会分享我的想法、经验和学习心得。
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://fiveeyes.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
