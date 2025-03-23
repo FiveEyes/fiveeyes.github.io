@@ -18,6 +18,8 @@ navigation_links:
     url: /books/
   - title: 碎碎念
     url: /moments/
+  - title: 小故事
+    url: /stories/
   - title: 关于
     url: /about/
 
@@ -38,6 +40,9 @@ collections:
   moments:
     output: true
     permalink: /moments/:path/
+  stories:
+    output: true
+    permalink: /stories/:path/
 
 # Exclude from processing
 exclude:

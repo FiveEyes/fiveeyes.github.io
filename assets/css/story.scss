@@ -1,0 +1,159 @@
+---
+---
+
+// 小故事页面特定样式
+.post {
+  &.story {
+    .post-header {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #e8e8e8;
+      padding-bottom: 15px;
+      
+      .post-title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #333;
+        letter-spacing: -1px;
+        line-height: 1.2;
+      }
+      
+      .post-meta {
+        font-size: 16px;
+        color: #828282;
+        margin-top: 10px;
+      }
+    }
+    
+    .story-tags {
+      margin-bottom: 20px;
+      
+      .story-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        font-size: 0.85em;
+        background-color: #f5f5f5;
+        color: #555;
+        border-radius: 15px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        transition: background-color 0.2s, color 0.2s;
+        
+        &:hover {
+          background-color: #e0e0e0;
+          color: #333;
+        }
+      }
+    }
+    
+    .post-content {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.8;
+      
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.8em;
+        color: #333;
+      }
+      
+      h1 {
+        font-size: 32px;
+        border-bottom: 1px solid #eaecef;
+        padding-bottom: 0.3em;
+      }
+      
+      h2 {
+        font-size: 28px;
+        padding-bottom: 0.3em;
+      }
+      
+      h3 {
+        font-size: 22px;
+      }
+      
+      p {
+        margin-bottom: 20px;
+      }
+      
+      blockquote {
+        border-left: 4px solid #dfe2e5;
+        color: #6a737d;
+        padding: 0 1em;
+        margin: 0 0 16px 0;
+        
+        p {
+          margin: 1em 0;
+        }
+      }
+      
+      img {
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+      }
+      
+      code {
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        background-color: rgba(27, 31, 35, 0.05);
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+      }
+      
+      pre {
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        font-size: 85%;
+        line-height: 1.45;
+        overflow: auto;
+        padding: 16px;
+        
+        code {
+          background-color: transparent;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+// 小故事列表页样式增强
+.stories-page {
+  .story-item {
+    .story-content {
+      &:hover {
+        .story-title a {
+          color: #0366d6;
+        }
+      }
+    }
+  }
+}
+
+// 响应式调整
+@media (max-width: 768px) {
+  .post.story {
+    .post-header {
+      .post-title {
+        font-size: 28px;
+      }
+    }
+    
+    .post-content {
+      font-size: 16px;
+      
+      h1 {
+        font-size: 26px;
+      }
+      
+      h2 {
+        font-size: 22px;
+      }
+      
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}

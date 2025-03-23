@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </p>
+  </header>
+
+  {% if page.tags.size > 0 %}
+    <div class="story-tags">
+      {% for tag in page.tags %}
+        <span class="story-tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<style>
+  .story-tags {
+    margin-bottom: 20px;
+  }
+  
+  .story-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.8em;
+    background-color: #f5f5f5;
+    color: #555;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .post-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+  }
+</style>
