@@ -1,0 +1,77 @@
+---
+---
+
+// 主页特定样式
+.home {
+  .page-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 10px;
+  }
+  
+  .post-list {
+    margin-left: 0;
+    list-style: none;
+    
+    > li {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+    
+    .post-meta {
+      font-size: 14px;
+      color: #828282;
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .post-link {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2a7ae2;
+      
+      &:hover {
+        text-decoration: none;
+        color: darken(#2a7ae2, 15%);
+      }
+    }
+    
+    .post-excerpt {
+      margin-top: 10px;
+      color: #555;
+    }
+    
+    .post-categories, .post-tags {
+      margin-top: 10px;
+      
+      span {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 3px 8px;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+    }
+    
+    .post-categories span {
+      background-color: #e8f4f8;
+      color: #2a7ae2;
+    }
+    
+    .post-tags span {
+      background-color: #f8f4e8;
+      color: #e67e22;
+    }
+  }
+}

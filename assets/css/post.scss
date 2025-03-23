@@ -1,0 +1,128 @@
+---
+---
+
+// 文章页面特定样式
+.post {
+  .post-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 15px;
+    
+    .post-title {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+    
+    .post-meta {
+      font-size: 16px;
+      color: #828282;
+      margin-top: 10px;
+    }
+  }
+  
+  .post-content {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    
+    h2 {
+      font-size: 28px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    pre {
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      margin-bottom: 20px;
+      
+      code {
+        background-color: transparent;
+        padding: 0;
+      }
+    }
+    
+    blockquote {
+      border-left: 4px solid #e8e8e8;
+      padding-left: 15px;
+      color: #777;
+      font-style: italic;
+      margin: 20px 0;
+    }
+    
+    img {
+      max-width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+  }
+  
+  .post-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+    
+    .post-categories, .post-tags {
+      margin-bottom: 15px;
+      
+      .label {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      
+      a {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+    }
+    
+    .post-categories a {
+      background-color: #e8f4f8;
+      color: #2a7ae2;
+      
+      &:hover {
+        background-color: darken(#e8f4f8, 10%);
+      }
+    }
+    
+    .post-tags a {
+      background-color: #f8f4e8;
+      color: #e67e22;
+      
+      &:hover {
+        background-color: darken(#f8f4e8, 10%);
+      }
+    }
+  }
+}
