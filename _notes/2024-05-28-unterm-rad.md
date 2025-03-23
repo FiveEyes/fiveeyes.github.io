@@ -1,5 +1,5 @@
 ---
-layout: book
+layout: note
 title: "在轮下"
 date: 2024-05-28 15:00:00 +0800
 author: "赫尔曼·黑塞"

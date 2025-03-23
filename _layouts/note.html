@@ -15,16 +15,16 @@ layout: default
     </p>
   </header>
 
-  <div class="book-metadata">
-    <div class="book-info">
-      {% if page.url %}<p><strong>链接:</strong> <a href="{{ page.url }}">{{ page.url }}</a></p>{% endif %}
+  <div class="no o t-metadata">
+    <div class="note-info">
+      <!-- {% if page.url %}<p><strong>链接:</strong> <a href="{{ page.url }}">{{ page.url }}</a></p>{% endif %} -->
       {% if page.author %}<p><strong>作者:</strong> {{ page.author }}</p>{% endif %}
       {% if page.publisher %}<p><strong>出版社:</strong> {{ page.publisher }}</p>{% endif %}
       {% if page.publish_year %}<p><strong>出版年份:</strong> {{ page.publish_year }}</p>{% endif %}
       {% if page.rating %}
       <p>
         <strong>评分:</strong> 
-        <span class="book-rating">
+        <span class="note-rating">
           {% assign rating_value = page.rating %}
           {% assign rating_parts = rating_value | split: "/" | first | split: "." %}
           {% assign rating_int = rating_parts[0] | plus: 0 %}
@@ -44,10 +44,10 @@ layout: default
     </div>
     
     {% if page.tags.size > 0 %}
-      <div class="book-tags">
+      <div class="note-tags">
         <strong>标签:</strong>
         {% for tag in page.tags %}
-          <span class="book-tag">{{ tag }}</span>
+          <span class="note-tag">{{ tag }}</span>
         {% endfor %}
       </div>
     {% endif %}
@@ -61,22 +61,22 @@ layout: default
 </article>
 
 <style>
-  .book-metadata {
+  .note-metadata {
     margin-bottom: 30px;
     padding: 15px;
     background-color: #f8f9fa;
     border-radius: 5px;
   }
   
-  .book-info p {
+  .note-info p {
     margin: 5px 0;
   }
   
-  .book-tags {
+  .note-tags {
     margin-top: 10px;
   }
   
-  .book-tag {
+  .note-tag {
     display: inline-block;
     padding: 2px 8px;
     font-size: 0.8em;
@@ -87,7 +87,7 @@ layout: default
     margin-bottom: 5px;
   }
   
-  .book-rating {
+  .note-rating {
     color: #f8b400;
   }
 </style>

@@ -1,17 +1,17 @@
 ---
-layout: page
+layout: note
 title: 暮色留声机
 permalink: /notes/
 ---
 
 <div class="notes-page">
-  <p class="books-intro">这里收录了我的读书笔记，包括小说、技术书籍和学术论文的阅读心得。</p>
+  <p class="notes-intro">这里收录了我的读书笔记，包括小说、技术书籍和学术论文的阅读心得。</p>
   
-  <div class="book-categories">
+  <div class="note-categories">
     <h2>分类浏览</h2>
-    {% assign book_categories = site.notes | map: "category" | compact | uniq | sort %}
+    {% assign note_categories = site.notes | map: "category" | compact | uniq | sort %}
     <div class="category-buttons">
-      {% for category in book_categories %}
+      {% for category in note_categories %}
         {% if category %}
           <a href="#{{ category | slugify }}" class="category-button">{{ category }}</a>
         {% endif %}
@@ -19,28 +19,28 @@ permalink: /notes/
     </div>
   </div>
   
-  {% assign sorted_books = site.notes | sort: "date" | reverse %}
+  {% assign sorted_notes = site.notes | sort: "date" | reverse %}
   
-  {% for category in book_categories %}
+  {% for category in note_categories %}
     {% if category %}
-      <div class="book-category" id="{{ category | slugify }}">
+      <div class="note-category" id="{{ category | slugify }}">
         <h2 class="category-name">{{ category }}</h2>
-        <div class="book-list">
-          {% for book in sorted_books %}
-            {% if book.category == category %}
-              <div class="book-item">
-                <h3 class="book-title">
-                  <a href="{{ book.url | relative_url }}">{{ book.title }}</a>
+        <div class="note-list">
+          {% for note in sorted_notes %}
+            {% if note.category == category %}
+              <div class="note-item">
+                <h3 class="note-title">
+                  <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
                 </h3>
-                <div class="book-meta">
-                  <span class="book-date">{{ book.date | date: "%Y-%m-%d" }}</span>
-                  {% if book.author %}
-                    <span class="book-author">作者: {{ book.author }}</span>
+                <div class="note-meta">
+                  <span class="note-date">{{ note.date | date: "%Y-%m-%d" }}</span>
+                  {% if note.author %}
+                    <span class="note-author">作者: {{ note.author }}</span>
                   {% endif %}
-                  {% if book.rating %}
-                    <span class="book-rating">
+                  {% if note.rating %}
+                    <span class="note-rating">
                       评分: 
-                      {% assign rating_value = book.rating | strip %}
+                      {% assign rating_value = note.rating | strip %}
                       {% assign rating_parts = rating_value | split: "/" | first | split: "." %}
                       {% assign rating_int = rating_parts[0] | to_integer %}
                       {% for i in (1..rating_int) %}
@@ -53,12 +53,12 @@ permalink: /notes/
                     </span>
                   {% endif %}
                 </div>
-                {% if book.tags %}
-                  <div class="book-tags">
-                    {% assign tags = book.tags %}
+                {% if note.tags %}
+                  <div class="note-tags">
+                    {% assign tags = note.tags %}
                     {% for tag in tags %}
                       {% if tag %}
-                        <span class="book-tag">{{ tag }}</span>
+                        <span class="note-tag">{{ tag }}</span>
                       {% endif %}
                     {% endfor %}
                   </div>
@@ -78,7 +78,7 @@ permalink: /notes/
     font-size: 1.1em;
   }
   
-  .book-categories {
+  .note-categories {
     margin-bottom: 40px;
   }
   
@@ -104,7 +104,7 @@ permalink: /notes/
     text-decoration: none;
   }
   
-  .book-category {
+  .note-category {
     margin-bottom: 40px;
   }
   
@@ -114,31 +114,31 @@ permalink: /notes/
     margin-bottom: 20px;
   }
   
-  .book-list {
+  .note-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
   }
   
-  .book-item {
+  .note-item {
     padding: 15px;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
     transition: transform 0.2s, box-shadow 0.2s;
   }
   
-  .book-item:hover {
+  .note-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
   
-  .book-title {
+  .note-title {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.2em;
   }
   
-  .book-meta {
+  .note-meta {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -147,11 +147,11 @@ permalink: /notes/
     color: #586069;
   }
   
-  .book-tags {
+  .note-tags {
     margin-top: 10px;
   }
   
-  .book-tag {
+  .note-tag {
     display: inline-block;
     padding: 2px 8px;
     font-size: 0.8em;
@@ -162,7 +162,7 @@ permalink: /notes/
     margin-bottom: 5px;
   }
   
-  .book-rating {
+  .note-rating {
     color: #f8b400;
   }
 </style>

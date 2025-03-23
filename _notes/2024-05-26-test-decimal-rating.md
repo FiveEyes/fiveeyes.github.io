@@ -1,5 +1,5 @@
 ---
-layout: book
+layout: note
 title: "测试小数点评分"
 date: 2024-05-26 10:00:00 +0800
 author: "测试作者"
