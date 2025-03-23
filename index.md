@@ -1,8 +1,6 @@
 ---
 layout: home
-title: 首页
+title: "Who's Waiting for the Wind?"
 ---
 
-# 欢迎来到我的博客
-
-这是我的个人博客，我会在这里分享我的想法、经验和学习心得。
+生活是正着来活，却是倒着去理解。

@@ -10,16 +10,16 @@ url: "https://freopen.com" # the base hostname & protocol for your site
 navigation_links:
   - title: 首页
     url: /
-  - title: 分类
-    url: /categories/
-  - title: 标签
-    url: /tags/
   - title: 读书笔记
     url: /notes/
   - title: 碎碎念
     url: /moments/
   - title: 小故事
     url: /stories/
+  - title: 分类
+    url: /categories/
+  - title: 标签
+    url: /tags/
   - title: 关于
     url: /about/
 

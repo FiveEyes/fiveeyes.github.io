@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 读书笔记
+title: 暮色留声机
 permalink: /notes/
 ---
 

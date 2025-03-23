@@ -1,25 +1,21 @@
 ---
 layout: page
-title: 关于我
+title: 谁在等风来
 permalink: /about/
 ---
 
 ## 关于我
 
-你好！欢迎来到我的博客。我是一名热爱技术的开发者，对编程、人工智能和开源项目充满热情。
+ENTP/ENFP/INTP人格，喜欢读书，喜欢分享。
 
-### 我的技能
+## 关于博客
 
-- 编程语言：Python, JavaScript, Java
-- 前端开发：HTML, CSS, React
-- 后端开发：Node.js, Django
-- 数据科学：Pandas, NumPy, TensorFlow
+这是一个个人博客，用于记录我的学习和生活。
 
-### 联系我
+## 联系我
 
 如果你有任何问题或建议，欢迎通过以下方式联系我：
 
-- 邮箱：your-email@example.com
-- GitHub：[你的GitHub用户名](https://github.com/fiveeyes)
+- Email：speakingchinglish@gmail.com
 
 感谢你访问我的博客！

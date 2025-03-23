@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "统计假设检验入门：Fisher、Neyman-Pearson与贝叶斯方法"
-date:   2024-05-20 10:00:00 +0800
+date:   2025-03-22 21:00:00 +0800
 categories: 统计学
-tags: 假设检验 频率学派 贝叶斯
+tags: 假设检验
 mathjax: true
 ---
 
