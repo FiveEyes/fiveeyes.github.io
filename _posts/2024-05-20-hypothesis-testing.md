@@ -40,5 +40,3 @@ $$
 | Fisher    | 证伪主义      | p值            |
 | NP引理     | 频率学派      | 错误率控制         |
 | 贝叶斯      | 主观概率      | 后验几率          |
-
-完整代码示例见[GitHub仓库](https://github.com/example/hypothesis-testing)
