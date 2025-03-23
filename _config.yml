@@ -14,6 +14,10 @@ navigation_links:
     url: /categories/
   - title: 标签
     url: /tags/
+  - title: 读书笔记
+    url: /books/
+  - title: 碎碎念
+    url: /moments/
   - title: 关于
     url: /about/
 
@@ -23,6 +27,17 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# 显示文章摘要
+show_excerpts: false
+
+collections:
+  books:
+    output: true
+    permalink: /books/:path/
+  moments:
+    output: true
+    permalink: /moments/:path/
 
 # Exclude from processing
 exclude:

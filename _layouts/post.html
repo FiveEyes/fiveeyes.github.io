@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%Y-%m-%d" }}
+      </time>
+      {% if page.author %}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </p>
+    
+    {% if page.categories.size > 0 or page.category %}
+      <div class="post-category">
+        <strong>分类:</strong>
+        {% if page.categories.size > 0 %}
+          {% for category in page.categories %}
+            <a href="{{ '/categories' | relative_url }}#{{ category | slugify }}" class="post-category-link">{{ category }}</a>
+          {% endfor %}
+        {% elsif page.category %}
+          <a href="{{ '/categories' | relative_url }}#{{ page.category | slugify }}" class="post-category-link">{{ page.category }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <div class="post-footer">
+    {% if page.tags.size > 0 %}
+      <div class="post-tags">
+        <strong>标签:</strong>
+        {% for tag in page.tags %}
+          <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<style>
+  /* 统一分类和标签的基础样式 */
+  .post-category,
+  .post-tags {
+    margin: 15px 0;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-size: 0.95em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  /* 统一分类链接和标签的样式 */
+  .post-category-link,
+  .post-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    line-height: 1.5;
+    vertical-align: middle;
+  }
+
+  /* 分类链接特定样式 */
+  .post-category-link {
+    background-color: #e8f4f8;
+    color: #2a7ae2;
+  }
+
+  .post-category-link:hover {
+    background-color: #d1e9f3;
+  }
+
+  /* 标签特定样式 */
+  .post-tag {
+    background-color: #f1f8ff;
+    color: #0366d6;
+  }
+
+  .post-tag:hover {
+    background-color: #e2efff;
+  }
+
+  .post-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e8e8e8;
+  }
+</style>
