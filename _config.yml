@@ -6,6 +6,17 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fiveeyes.github.io" # the base hostname & protocol for your site
 
+# 导航菜单配置
+navigation_links:
+  - title: 首页
+    url: /
+  - title: 关于
+    url: /about/
+  - title: 分类
+    url: /categories/
+  - title: 标签
+    url: /tags/
+
 # Build settings
 markdown: kramdown
 theme: minima
