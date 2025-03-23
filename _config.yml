@@ -1,21 +1,21 @@
 # Site settings
-title: 我的博客
-email: your-email@example.com
+title: Sihuhata's Blog
+email: speakingchinglish@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   欢迎来到我的个人博客，这里会分享我的想法、经验和学习心得。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://fiveeyes.github.io" # the base hostname & protocol for your site
+url: "https://freopen.com" # the base hostname & protocol for your site
 
 # 导航菜单配置
 navigation_links:
   - title: 首页
     url: /
-  - title: 关于
-    url: /about/
   - title: 分类
     url: /categories/
   - title: 标签
     url: /tags/
+  - title: 关于
+    url: /about/
 
 # Build settings
 markdown: kramdown
