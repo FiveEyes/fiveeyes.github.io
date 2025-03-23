@@ -15,7 +15,7 @@ navigation_links:
   - title: 标签
     url: /tags/
   - title: 读书笔记
-    url: /books/
+    url: /notes/
   - title: 碎碎念
     url: /moments/
   - title: 小故事
@@ -34,9 +34,9 @@ plugins:
 show_excerpts: false
 
 collections:
-  books:
+  notes:
     output: true
-    permalink: /books/:path/
+    permalink: /notes/:path/
   moments:
     output: true
     permalink: /moments/:path/

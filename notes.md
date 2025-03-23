@@ -1,15 +1,15 @@
 ---
 layout: page
 title: 读书笔记
-permalink: /books/
+permalink: /notes/
 ---
 
-<div class="books-page">
+<div class="notes-page">
   <p class="books-intro">这里收录了我的读书笔记，包括小说、技术书籍和学术论文的阅读心得。</p>
   
   <div class="book-categories">
     <h2>分类浏览</h2>
-    {% assign book_categories = site.books | map: "category" | compact | uniq | sort %}
+    {% assign book_categories = site.notes | map: "category" | compact | uniq | sort %}
     <div class="category-buttons">
       {% for category in book_categories %}
         {% if category %}
@@ -19,7 +19,7 @@ permalink: /books/
     </div>
   </div>
   
-  {% assign sorted_books = site.books | sort: "date" | reverse %}
+  {% assign sorted_books = site.notes | sort: "date" | reverse %}
   
   {% for category in book_categories %}
     {% if category %}
@@ -73,7 +73,7 @@ permalink: /books/
 </div>
 
 <style>
-  .books-intro {
+  .notes-intro {
     margin-bottom: 30px;
     font-size: 1.1em;
   }
