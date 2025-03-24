@@ -5,7 +5,7 @@ permalink: /stories/
 ---
 
 <div class="stories-page">
-  <p class="stories-intro">这里收录了我(与AI)创作的小故事，包括短篇故事、随笔和创意写作等内容。</p>
+  <p class="stories-intro">这里收录了AI(与我)创作的小故事，包括短篇故事、随笔和创意写作等内容。</p>
   
   {% assign sorted_stories = site.stories | sort: "date" | reverse %}
   

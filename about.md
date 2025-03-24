@@ -6,7 +6,7 @@ permalink: /about/
 
 ## 关于我
 
-ENTP/ENFP/INTP人格，喜欢读书，喜欢分享。
+ENFP/ENTP/INTP人格，喜欢读书，喜欢分享。
 
 ## 关于博客
 

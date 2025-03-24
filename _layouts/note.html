@@ -17,7 +17,7 @@ layout: default
 
   <div class="no o t-metadata">
     <div class="note-info">
-      <!-- {% if page.url %}<p><strong>链接:</strong> <a href="{{ page.url }}">{{ page.url }}</a></p>{% endif %} -->
+      {% if page.link %}<p><strong>链接:</strong> <a href="{{ page.link }}">{{ page.link }}</a></p>{% endif %}
       {% if page.author %}<p><strong>作者:</strong> {{ page.author }}</p>{% endif %}
       {% if page.publisher %}<p><strong>出版社:</strong> {{ page.publisher }}</p>{% endif %}
       {% if page.publish_year %}<p><strong>出版年份:</strong> {{ page.publish_year }}</p>{% endif %}
