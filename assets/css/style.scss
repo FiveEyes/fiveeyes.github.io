@@ -72,6 +72,8 @@
 // 自定义样式
 body {
   font-family: 'Noto Sans SC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 // 增加内容宽度，减少左右留白
@@ -98,9 +100,34 @@ body {
 
 
 @media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
   .site-header {
     min-height: 35px;
     border-top-width: 2px;
+  }
+  
+  .post-title {
+    font-size: 1.8em !important;
+  }
+  
+  .post-content h2 {
+    font-size: 1.5em !important;
+  }
+  
+  .post-content h3 {
+    font-size: 1.3em !important;
+  }
+  
+  .post-link {
+    font-size: 1.3em !important;
+  }
+  
+  .wrapper {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 

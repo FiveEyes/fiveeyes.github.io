@@ -120,6 +120,20 @@ permalink: /notes/
     gap: 20px;
   }
   
+  @media (max-width: 768px) {
+    .note-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .note-title {
+      font-size: 1.3em;
+    }
+    
+    .note-meta {
+      font-size: 1em;
+    }
+  }
+  
   .note-item {
     padding: 15px;
     border: 1px solid #e1e4e8;

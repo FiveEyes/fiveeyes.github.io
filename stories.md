@@ -161,5 +161,9 @@ permalink: /stories/
     .story-content {
       margin-left: 20px;
     }
+    
+    .story-title {
+      font-size: 1.3em;
+    }
   }
 </style>
