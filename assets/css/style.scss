@@ -113,6 +113,11 @@ body {
     font-size: 1.8em !important;
   }
   
+  .post-content {
+    font-size: 20px !important;
+    line-height: 1.7 !important;
+  }
+  
   .post-content h2 {
     font-size: 1.5em !important;
   }
@@ -128,6 +133,10 @@ body {
   .wrapper {
     padding-right: 15px;
     padding-left: 15px;
+  }
+  
+  .post-content p {
+    margin-bottom: 1.2em;
   }
 }
 

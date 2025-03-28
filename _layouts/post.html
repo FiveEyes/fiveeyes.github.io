@@ -31,6 +31,19 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+  
+  <style>
+    @media (max-width: 768px) {
+      .post-content {
+        font-size: 1.3em !important;
+        line-height: 1.7 !important;
+      }
+      
+      .post-content p {
+        margin-bottom: 1.2em;
+      }
+    }
+  </style>
 
   <div class="post-footer">
     {% if page.tags.size > 0 %}
