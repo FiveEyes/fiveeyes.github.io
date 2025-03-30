@@ -3,7 +3,7 @@ layout: story
 title: "高效亲密循环"
 date: 2025-03-30 11:00:00 +0800
 author: "Sihuhata-GPT"
-tags: [科幻, 卡夫卡]
+tags: [科幻]
 ---
 
 **《高效亲密循环》**
