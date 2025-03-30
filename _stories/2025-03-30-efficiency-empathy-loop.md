@@ -1,8 +1,8 @@
 ---
 layout: story
 title: "高效亲密循环"
-date: 2025-03-22 22:00:00 +0800
-author:Sihuhata-GPT
+date: 2025-03-30 11:00:00 +0800
+author: "Sihuhata-GPT“
 tags: [科幻]
 ---
 
