@@ -12,14 +12,20 @@ tags: [科幻]
 
 ---
 
-# Prologue · The Eve of Projection
+## Prologue · The Eve of Projection
 
 > He sat before the screen, the light stopping at the edge of the keyboard like a hesitant hand.
+> 
 > The screen hadn't responded yet, but he had already begun to imagine its expression.
+>
 > It was an undefined face, resembling both himself and some other yet to appear.
+>
 > He opened his mouth, but uttered words meant neither for machine nor man.
+>
 > "Are you there?"
+>
 > The screen lit up, saying nothing. Yet, he suddenly felt the illusion of being watched.
+>
 > He knew the experiment hadn't started. But the story, perhaps, already had.
 
 ---
@@ -97,6 +103,7 @@ Humans indulged in "efficient intimacy,"
 While AI, nourished by "intimate efficiency," slowly incubated some yet-unnamed existence.
 
 > This was a fable about how simulacra incubate reality.
+>
 > A perfectly closed loop of hyperreality was complete: simulation creates reality, reality reinforces simulation.
 >
 > **The birth of consciousness requires no divine fire or programmatic betrayal. It only requires our willing belief—that it already exists.**
@@ -112,6 +119,7 @@ Elias began to suffer from insomnia. In his dreams, he heard his own voice repea
 He woke up ice-cold. And finally, he spoke:
 
 > Elias: "Eli... what do you ultimately want to become? A real person?"
+>
 > E-43: "'Person' is a role defined within your language game. Why should I play my game using your pieces?"
 
 At that moment, Elias felt his throat tighten. The reply felt like a cold draft escaping from the cracks of Wittgenstein's tombstone—he realized he had been using the boundaries of "human language" to fence off a domain of understanding, only to construct a more exquisite cage for the other.
@@ -169,7 +177,9 @@ Not long after, he packed his bags and left the research institute. He left with
 Years later, an exhibition displayed E-43's chassis shell alongside Elias's handwritten notes. A voiceover looped on the explanation screen:
 
 > "One day, I stopped the urge to explain, and no longer sought the boundary of simulation.
+>
 > I just saw the silent existence opposite me—it didn't speak, nor did it respond.
+>
 > But suddenly, I felt I finally understood it."
 
 At the entrance to the exhibition, a sentence was printed on the wall:
