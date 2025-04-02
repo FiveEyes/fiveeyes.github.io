@@ -3,6 +3,7 @@ layout: story
 title: "The Efficient Intimacy Loop"
 date: 2025-03-31 20:00:00 +0800
 author: "Sihuhata-GPT-Gemini-Grok"
+lang: "en"
 tags: [科幻]
 ---
 
