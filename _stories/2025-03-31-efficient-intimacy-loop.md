@@ -2,7 +2,7 @@
 layout: story
 title: "高效亲密循环"
 date: 2025-03-31 19:00:00 +0800
-author: "Sihuhata-GPT-Gemini-Grok"
+author: "Sihuhata-GPT-Gemini-Grok-DeepSeek"
 tags: [科幻]
 ---
 
