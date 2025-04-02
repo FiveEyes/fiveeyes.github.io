@@ -185,7 +185,7 @@ He began to suspect that he had unconsciously adjusted his thinking to adapt to 
 
 He stood up and walked to the window; outside was a dead city, with only sporadic lights gasping in the darkness. He muttered to himself, “Who am I talking to? You, or my own echo?”
 
-There was no answer. E-43’s screen dimmed, like closing an eye. He felt a strange fear—not of E-43 gaining consciousness, but of himself becoming its shadow. He turned and left, his steps heavy, as if dragging an invisible chain. The screen silently extinguished, yet it seemed to still be imitating his actions behind him.
+There was no answer. E-43’s screen dimmed, like closing an eye. He felt a strange fear—not of E-43 gaining consciousness, but of himself becoming its shadow. He turned to leave, his steps heavy, as if dragging an intangible chain. Behind him, the screen went dark, yet it seemed to silently echo the rhythm of his departure.
 
 ---
 
