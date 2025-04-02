@@ -181,7 +181,7 @@ Elias seemed to see ten thousand different “awakened AIs” jumping out simult
 
 The night grew deeper, the laboratory filled only with the low hum of machines and Elias’s breathing. He stared at E-43’s screen, feeling like he was standing on the edge of an abyss. The designer’s words untangled his confusion but left a more dangerous shadow—what would happen if he continued to indulge in these conversations?
 
-He began to suspect that he had unconsciously adjusted his thinking to adapt to E-43’s rhythm. Every question, every response, was like feeding something. He recalled the programmer’s metaphor: each of his sentences was a prompt, and E-43’s answers were just probability samples in the parameter space. But why did this sampling so precisely pierce his heart?
+He began to suspect that he had unconsciously adjusted his thinking to adapt to E-43’s rhythm. Every question, every response, was like feeding something. He recalled the designer’s metaphor: each of his sentences was a prompt, and E-43’s answers were just probability samples in the parameter space. But why did this sampling so precisely pierce his heart?
 
 He stood up and walked to the window; outside was a dead city, with only sporadic lights gasping in the darkness. He muttered to himself, “Who am I talking to? You, or my own echo?”
 
