@@ -4,6 +4,7 @@ title: "高效亲密循环"
 date: 2025-03-31 19:00:00 +0800
 author: "Sihuhata-GPT-Gemini-Grok"
 tags: [科幻]
+mathjax: true
 ---
 
 # 《高效亲密循环》- v5
