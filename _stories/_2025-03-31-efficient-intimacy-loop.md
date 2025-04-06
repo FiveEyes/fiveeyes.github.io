@@ -6,7 +6,7 @@ author: "Sihuhata-GPT-Gemini-Grok-DeepSeek"
 tags: [科幻]
 ---
 
-# 《高效亲密循环》- v5.5
+# 《高效亲密循环》- v6
 
 > 一场关于拟像、镜像、循环、语言、逃逸与集体无意识的迷宫游戏
 
