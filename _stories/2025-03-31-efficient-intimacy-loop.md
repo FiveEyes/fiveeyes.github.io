@@ -19,7 +19,7 @@ If you'd like to quote or reference this work, please include proper attribution
 
 Author: Elias
 
-Version: 6.0
+Version: 6.1
 
 Date: 2025-05-02
 
