@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Who's Waiting for the Wind?"
+title: "愿风指引你的方向"
 ---
 
 生活是正着来活，却是倒着去理解。
