@@ -1,0 +1,59 @@
+// _sass/_post-layout.scss
+
+@import "variables";
+@import "mixins";
+
+// Styles moved from _layouts/post.html
+
+/* 统一分类和标签的基础样式 */
+.post-category,
+.post-tags {
+  margin: ($spacing-unit / 2) 0;
+  padding: $tag-category-container-padding-y $tag-category-container-padding-x;
+  background-color: $tag-category-container-bg;
+  border-radius: $base-border-radius;
+  font-size: $tag-category-container-font-size;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $tag-category-container-gap;
+  align-items: center;
+}
+
+/* 统一分类链接和标签的样式 */
+.post-category-link,
+.post-tag {
+  display: inline-block;
+  padding: $tag-link-padding-y $tag-link-padding-x;
+  border-radius: $tag-link-border-radius;
+  font-size: $tag-link-font-size;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+/* 分类链接特定样式 */
+.post-category-link {
+  background-color: $category-bg-color;
+  color: $category-text-color;
+
+  &:hover {
+    background-color: $category-hover-bg-color;
+  }
+}
+
+/* 标签特定样式 */
+.post-tag {
+  background-color: $tag-bg-color;
+  color: $tag-text-color;
+
+  &:hover {
+    background-color: $tag-hover-bg-color;
+  }
+}
+
+.post-footer {
+  margin-top: ($spacing-unit * 4 / 3);
+  padding-top: ($spacing-unit * 2 / 3);
+  border-top: 1px solid $border-color;
+}

@@ -1,0 +1,237 @@
+// _sass/_header.scss
+// 自定义header样式
+
+// ============================================================================
+// 网站头部样式
+// ============================================================================
+
+.site-header {
+  border-top: 3px solid $primary-color;
+  border-bottom: 1px solid $border-color;
+  background-color: $background-color;
+  min-height: 56px;
+  position: relative;
+  
+  .wrapper {
+    padding-top: ($spacing-unit / 3);
+    padding-bottom: ($spacing-unit / 3);
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+// 网站标题
+.site-title {
+  font-size: 1.8em;
+  font-weight: $heading-font-weight;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+// 网站logo
+.site-logo {
+  img {
+    height: 40px;
+    width: auto;
+    margin-right: ($spacing-unit / 2);
+  }
+}
+
+// 导航样式
+.site-nav {
+  position: relative;
+  
+  .nav-trigger {
+    display: none;
+  }
+  
+  .nav-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    
+    .menu-icon {
+      display: block;
+      width: 24px;
+      height: 20px;
+      position: relative;
+      
+      span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: $primary-color;
+        margin-bottom: 4px;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: ($spacing-unit * 2/3);
+    
+    .nav-link {
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: $base-border-radius;
+      transition: all 0.2s ease;
+      position: relative;
+      
+      &:hover {
+        color: $link-color;
+        background-color: lighten($border-color, 5%);
+      }
+      
+      // 当前页面高亮
+      &.current {
+        color: $link-color;
+        font-weight: $heading-font-weight;
+      }
+    }
+  }
+  
+  // 社交链接
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: ($spacing-unit / 3);
+    margin-left: ($spacing-unit / 2);
+    padding-left: ($spacing-unit / 2);
+    border-left: 1px solid $border-color;
+    
+    .social-link {
+      color: $secondary-color;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $link-color;
+      }
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// 响应式设计
+// ============================================================================
+
+@media (max-width: #{$on-laptop}) {
+  .site-header {
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: ($spacing-unit / 2);
+    }
+    
+    .site-nav {
+      width: 100%;
+      
+      .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: $background-color;
+        border: 1px solid $border-color;
+        border-radius: $base-border-radius;
+        padding: ($spacing-unit / 2);
+        margin-top: ($spacing-unit / 2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        
+        .nav-link {
+          width: 100%;
+          text-align: left;
+          padding: ($spacing-unit / 3) 0;
+          border-bottom: 1px solid $border-color;
+          border-radius: 0;
+          
+          &:last-of-type {
+            border-bottom: none;
+          }
+        }
+        
+        .social-links {
+          margin-left: 0;
+          padding-left: 0;
+          border-left: none;
+          border-top: 1px solid $border-color;
+          padding-top: ($spacing-unit / 2);
+          margin-top: ($spacing-unit / 2);
+          justify-content: center;
+        }
+      }
+      
+      // 当checkbox被选中时显示菜单
+      .nav-trigger:checked ~ .nav-menu {
+        display: flex;
+      }
+      
+      // 汉堡菜单动画
+      .nav-trigger:checked ~ .nav-toggle .menu-icon {
+        span:nth-child(1) {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        
+        span:nth-child(3) {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{$on-palm}) {
+  .site-header {
+    .site-title {
+      font-size: 1.5em;
+    }
+    
+    .site-nav {
+      .nav-menu {
+        padding: ($spacing-unit / 3);
+        
+        .nav-link {
+          font-size: 0.95em;
+        }
+      }
+    }
+  }
+}

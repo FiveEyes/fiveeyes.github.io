@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: page
 title: 暮色留声机
 permalink: /notes/
 ---

@@ -1,39 +1,42 @@
 ---
 ---
 
+@import "variables";
+@import "mixins";
+
 // 文章页面特定样式
 .post {
   .post-header {
-    margin-bottom: 30px;
-    border-bottom: 2px solid #e8e8e8;
-    padding-bottom: 15px;
+    margin-bottom: $spacing-unit;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: ($spacing-unit / 2);
     
     .post-title {
-      font-size: 36px;
-      font-weight: bold;
-      color: #333;
+      font-size: 2.25em; // ~36px
+      font-weight: $heading-font-weight;
+      color: $primary-color;
       letter-spacing: -1px;
       line-height: 1.2;
     }
     
     .post-meta {
-      font-size: 16px;
-      color: #828282;
-      margin-top: 10px;
+      font-size: $base-font-size;
+      color: $secondary-color;
+      margin-top: ($spacing-unit / 3);
     }
   }
   
   .post-content {
-    margin-bottom: 30px;
-    font-size: 18px;
-    line-height: 1.8;
+    margin-bottom: $spacing-unit;
+    font-size: 1.125em; // ~18px
+    line-height: 1.8; // Keep specific if desired, or use $base-line-height
     
     h1 {
-      font-size: 32px;
-      margin-top: 45px;
-      margin-bottom: 25px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #e8e8e8;
+      font-size: 2em; // ~32px, h1 inside post-content
+      margin-top: ($spacing-unit * 1.5);
+      margin-bottom: $grid-gap; // Using grid-gap for consistency
+      padding-bottom: ($spacing-unit * 2 / 5);
+      border-bottom: 1px solid $border-color;
       
       a {
         color: inherit;
@@ -41,17 +44,17 @@
         
         &:hover {
           text-decoration: underline;
-          color: #0066cc;
+          color: $accent-color;
         }
       }
     }
     
     h2 {
-      font-size: 28px;
-      margin-top: 40px;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e8e8e8;
+      font-size: 1.75em; // ~28px, h2 inside post-content
+      margin-top: ($spacing-unit * 4 / 3);
+      margin-bottom: ($spacing-unit * 2 / 3);
+      padding-bottom: ($spacing-unit / 3);
+      border-bottom: 1px solid $border-color;
       
       a {
         color: inherit;
@@ -65,22 +68,21 @@
     }
     
     h3 {
-      font-size: 22px;
-      margin-top: 30px;
-      margin-bottom: 15px;
+      font-size: 1.375em; // ~22px, h3 inside post-content
+      margin-top: $spacing-unit;
+      margin-bottom: ($spacing-unit / 2);
     }
     
     p {
-      margin-bottom: 20px;
+      margin-bottom: ($spacing-unit * 2 / 3);
     }
     
+    // code and pre styles are now primarily handled by _base.scss
+    // Specific font-family for 'code' within '.post-content' can be kept if needed.
     code {
-      background-color: #f0f0f0;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-family: 'Courier New', Courier, monospace;
+      font-family: 'Courier New', Courier, monospace; // Keep if this specific font is desired here
     }
-    
+
     pre {
       padding: 15px;
       overflow-x: auto;

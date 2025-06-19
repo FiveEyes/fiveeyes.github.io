@@ -1,3 +1,11 @@
+---
+layout: story
+title: "高效亲密循环"
+date: 2025-03-31 11:00:00 +0800
+author: "Sihuhata"
+tags: [科幻]
+---
+
 ```
 © 2025 Elias. All rights reserved.
 This work is licensed for personal, non-commercial use only.  

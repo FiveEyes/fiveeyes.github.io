@@ -1,92 +1,95 @@
+--- 
 ---
----
+
+@import "variables";
+@import "mixins";
 
 // 主页特定样式
 .home {
   .page-heading {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #333;
-    border-bottom: 2px solid #e8e8e8;
-    padding-bottom: 10px;
+    font-size: 2em; // Corresponds to h2 in _base.scss
+    font-weight: $heading-font-weight;
+    margin-bottom: $spacing-unit;
+    color: $primary-color;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: ($spacing-unit / 3);
   }
   
   .post-list-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    border-bottom: 1px solid #e8e8e8;
-    padding-bottom: 8px;
+    font-size: 1.75em; // Corresponds to h3 in _base.scss
+    font-weight: $heading-font-weight;
+    margin-bottom: ($spacing-unit * 2 / 3);
+    color: $primary-color;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: ($spacing-unit / 3 - 2px);
   }
   
   .post-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 25px;
-    padding: 20px 0;
+    gap: $grid-gap;
+    padding: ($spacing-unit * 2 / 3) 0;
   
     > li {
       margin: 0;
-      padding: 25px;
-      border-radius: 8px;
-      background: white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: $grid-gap; // Using grid-gap for consistency, or define a new card-padding variable
+      border-radius: $base-border-radius * 2;
+      background: white; // Consider $card-background-color: white; in variables
+      @include box-shadow(1); // Using level 1, adjust if needed or keep custom shadow
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
   
       &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        @include box-shadow(2); // Using level 2, adjust if needed or keep custom shadow
       }
     }
   }
   
   .post-meta {
-    font-size: 14px;
-    color: #828282;
-    margin-bottom: 8px;
+    font-size: 0.875em; // ~14px
+    color: $secondary-color;
+    margin-bottom: ($spacing-unit / 3 - 2px);
   }
   
   .post-link {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: ($spacing-unit * 2 / 5);
   }
   
   .post-metadata {
-    margin-top: 15px;
+    margin-top: ($spacing-unit / 2);
   }
   
   .post-categories, .post-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 8px;
+    gap: ($spacing-unit / 5);
+    margin-top: ($spacing-unit / 3 - 2px);
   }
   
   .post-categories span {
-    background: linear-gradient(135deg, #e8f4f8, #d4e8ff);
-    color: #1a5bbf;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
+    background: linear-gradient(135deg, lighten($link-color, 40%), lighten($link-color, 30%)); // Example, adjust colors
+    color: darken($link-color, 10%); // Example, adjust color
+    padding: 3px ($spacing-unit / 3);
+    border-radius: $base-border-radius * 3;
+    font-size: 0.75em; // ~12px
     font-weight: 500;
     display: inline-flex;
     align-items: center;
     
     i {
-      margin-right: 4px;
-      font-size: 11px;
+      margin-right: $base-border-radius;
+      font-size: 0.6875em; // ~11px
     }
   }
   
   .post-tags span {
-    background: linear-gradient(135deg, #f8f4e8, #ffedd4);
-    color: #d35400;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
+    background: linear-gradient(135deg, #f8f4e8, #ffedd4); // Keep specific if not in theme
+    color: #d35400; // Consider adding $tag-color: #d35400; to variables
+    padding: 3px ($spacing-unit / 3);
+    border-radius: $base-border-radius * 3;
+    font-size: 0.75em; // ~12px
     font-weight: 500;
     display: inline-flex;
     align-items: center;
@@ -100,12 +103,12 @@
   @media (max-width: 768px) {
     .post-list {
       grid-template-columns: 1fr;
-      gap: 15px;
-      padding: 15px 0;
+      gap: ($grid-gap / 2 + 2.5px); // ~15px
+      padding: ($spacing-unit / 2) 0;
     }
     
     .post-link {
-      font-size: 20px;
+      font-size: 1.25em; // ~20px
     }
   }
 }

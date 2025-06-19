@@ -1,0 +1,57 @@
+// _sass/_variables.scss
+
+// Colors
+$primary-color: #333;
+$secondary-color: #828282;
+$accent-color: #0066cc;
+$link-color: #2a7ae2;
+$link-hover-color: #004080;
+$border-color: #e8e8e8;
+$background-color: #f8f8f8;
+$code-bg-color: #f0f0f0;
+
+// Typography
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size: 14px;
+$base-line-height: 1.6;
+
+$heading-font-family: $base-font-family;
+$heading-font-weight: bold;
+
+// Spacing
+$spacing-unit: 30px;
+
+// Borders
+$base-border-radius: 4px;
+
+// Grid
+$grid-gap: 25px;
+
+// Responsive breakpoints
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+$on-medium-screen: 960px !default;
+$on-large-screen:  1200px !default;
+
+// Tags & Categories
+$tag-category-container-bg: #f8f9fa;
+$tag-category-container-padding-y: 8px;
+$tag-category-container-padding-x: 12px;
+$tag-category-container-gap: 8px;
+$tag-category-container-font-size: 0.95em;
+
+$category-bg-color: #e8f4f8;
+$category-text-color: $link-color; // #2a7ae2
+$category-hover-bg-color: #d1e9f3;
+
+$tag-bg-color: #f1f8ff;
+$tag-text-color: #0366d6; // A specific blue for tags from post layout
+$tag-hover-bg-color: #e2efff;
+
+$tag-link-padding-y: 4px;
+$tag-link-padding-x: 12px;
+$tag-link-border-radius: 15px;
+$tag-link-font-size: 0.9em;
+
+// Specific tag color from home.scss (for potential future harmonization or specific use)
+$home-tag-text-color: #d35400;
