@@ -19,6 +19,24 @@ permalink: /posts/
           <a href="#{{ category | slugify }}" class="category-button">{{ category }}</a>
         {% endif %}
       {% endfor %}
+      <!-- 检查是否有未分类文章，如果有则显示按钮 -->
+      {% assign has_uncategorized = false %}
+      {% for post in site.posts %}
+        {% assign post_has_category = false %}
+        {% if post.categories.size > 0 %}
+          {% assign post_has_category = true %}
+        {% endif %}
+        {% if post.category and post.category != "" %}
+          {% assign post_has_category = true %}
+        {% endif %}
+        {% unless post_has_category %}
+          {% assign has_uncategorized = true %}
+          {% break %}
+        {% endunless %}
+      {% endfor %}
+      {% if has_uncategorized %}
+        <a href="#uncategorized" class="category-button">其他文章</a>
+      {% endif %}
     </div>
   </div>
   
@@ -69,7 +87,20 @@ permalink: /posts/
   {% endfor %}
   
   <!-- 显示没有分类的文章 -->
-  {% assign uncategorized_posts = site.posts | where: "categories", empty | where: "category", empty %}
+  {% assign uncategorized_posts = "" | split: "," %}
+  {% for post in sorted_posts %}
+    {% assign has_category = false %}
+    {% if post.categories.size > 0 %}
+      {% assign has_category = true %}
+    {% endif %}
+    {% if post.category and post.category != "" %}
+      {% assign has_category = true %}
+    {% endif %}
+    {% unless has_category %}
+      {% assign uncategorized_posts = uncategorized_posts | push: post %}
+    {% endunless %}
+  {% endfor %}
+  
   {% if uncategorized_posts.size > 0 %}
     <div class="post-category" id="uncategorized">
       <h2 class="category-name">其他文章</h2>
@@ -145,7 +176,6 @@ permalink: /posts/
   }
   
   .category-name {
-    border-bottom: 2px solid #eaecef;
     padding-bottom: 10px;
     margin-bottom: 20px;
     color: #24292e;

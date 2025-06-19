@@ -118,12 +118,10 @@ permalink: /categories/
   .category-group {
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
   }
 
   .category-name {
     padding-bottom: 10px;
-    border-bottom: 2px solid #0366d6;
     display: inline-block;
   }
 

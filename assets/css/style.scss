@@ -41,11 +41,19 @@ body {
   padding: ($spacing-unit) 0;
 }
 
-// 页面标题
-.page-heading {
-  font-size: 2em;
-  margin-bottom: ($spacing-unit);
+// 页面标题 - 统一首页和其他页面的样式
+.page-heading,
+.page-title {
+  font-size: 2.5em;
+  font-weight: $heading-font-weight;
   color: $primary-color;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.home .page-heading {
+  margin-bottom: 1.5rem;
 }
 
 // 文章列表
@@ -92,12 +100,7 @@ body {
   }
 }
 
-.site-header {
-  border-top: 2px solid $primary-color;
-  border-bottom: 1px solid $border-color;
-  min-height: 35px;
-  background-color: $background-color;
-}
+/* .site-header 样式已移至 _sass/_header.scss 进行统一管理 */
 
 
 @media (max-width: #{$on-laptop}) {
@@ -106,8 +109,14 @@ body {
   }
   
   .site-header {
-    min-height: 35px;
     border-top-width: 2px;
+  }
+  
+  // 统一的页面标题响应式样式
+  .page-heading,
+  .page-title {
+    font-size: 2em;
+    text-align: left;
   }
   
   .post-title {
@@ -138,6 +147,13 @@ body {
   
   .post-content p {
     margin-bottom: 1.2em;
+  }
+}
+
+@media (max-width: #{$on-palm}) {
+  .page-heading,
+  .page-title {
+    font-size: 1.7em;
   }
 }
 

@@ -9,26 +9,212 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "最新文章" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          <div class="post-excerpt">{{ post.excerpt }}</div>
-        {%- endif -%}
-        
-        <!-- 分类和标签已移除，使首页更简洁 -->
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+  <!-- 合并所有内容类型 -->
+  {% assign all_posts = site.posts %}
+  {% assign all_stories = site.stories %}
+  {% assign all_notes = site.notes %}
+  {% assign all_moments = site.moments %}
+  
+  <!-- 将所有内容合并到一个数组中 -->
+  {% assign all_content = all_posts | concat: all_stories | concat: all_notes | concat: all_moments %}
+  
+  <!-- 按日期排序（最新的在前） -->
+  {% assign sorted_content = all_content | sort: 'date' | reverse %}
 
+  {%- if sorted_content.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "全部内容" }}</h2>
+    
+    <!-- 简化分页逻辑 - 暂时显示前20篇内容 -->
+    {% assign page_size = 20 %}
+    
+    <ul class="post-list">
+      {% for item in sorted_content limit: page_size %}
+        <li class="post-item">
+          {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+          <div class="post-header">
+            <span class="post-meta">{{ item.date | date: date_format }}</span>
+            
+            <!-- 显示内容类型 -->
+            <div class="post-type-info">
+              {% if item.collection == 'stories' %}
+                <span class="content-type content-type-story">故事</span>
+              {% elsif item.collection == 'notes' %}
+                <span class="content-type content-type-note">笔记</span>
+              {% elsif item.collection == 'moments' %}
+                <span class="content-type content-type-moment">时刻</span>
+              {% else %}
+                <span class="content-type content-type-post">文章</span>
+              {% endif %}
+              
+              {%- if item.categories.size > 0 -%}
+                <div class="post-categories">
+                  {%- for category in item.categories -%}
+                    <span class="post-category">{{ category }}</span>
+                  {%- endfor -%}
+                </div>
+              {%- elsif item.category -%}
+                <div class="post-categories">
+                  <span class="post-category">{{ item.category }}</span>
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+          
+          <h3>
+            <a class="post-link" href="{{ item.url | relative_url }}">
+              {{ item.title | escape }}
+            </a>
+          </h3>
+          
+          {%- if item.excerpt -%}
+            <div class="post-excerpt">{{ item.excerpt | strip_html | truncatewords: 30 }}</div>
+          {%- elsif item.content -%}
+            <div class="post-excerpt">{{ item.content | strip_html | truncatewords: 30 }}</div>
+          {%- endif -%}
+          
+          {%- if item.tags.size > 0 -%}
+            <div class="post-tags">
+              {%- for tag in item.tags -%}
+                <span class="post-tag">{{ tag }}</span>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </li>
+      {% endfor %}
+    </ul>
+
+    <!-- 显示内容统计信息 -->
+    {% assign total_items = sorted_content.size %}
+    {%- if total_items > page_size -%}
+      <div class="content-info">
+        <p>显示前 {{ page_size }} 篇内容，共 {{ total_items }} 篇。<a href="/posts/" class="view-all-link">查看全部文章</a></p>
+      </div>
+    {%- else -%}
+      <div class="content-info">
+        <p>共 {{ total_items }} 篇内容</p>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
 </div>
+
+<style>
+  .post-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .post-type-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .content-type {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .content-type-post {
+    background-color: #dbeafe;
+    color: #1e40af;
+  }
+  
+  .content-type-story {
+    background-color: #fce7f3;
+    color: #be185d;
+  }
+  
+  .content-type-note {
+    background-color: #ecfdf5;
+    color: #059669;
+  }
+  
+  .content-type-moment {
+    background-color: #fef3c7;
+    color: #d97706;
+  }
+  
+  .post-categories {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .post-category {
+    background-color: #f1f8ff;
+    color: #0366d6;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+  
+  .post-excerpt {
+    margin: 0.75rem 0;
+    color: #586069;
+    line-height: 1.5;
+  }
+  
+  .post-tags {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .post-tag {
+    background-color: #f6f8fa;
+    color: #24292e;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 0.75em;
+  }
+  
+  /* 内容信息样式 */
+  .content-info {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f6f8fa;
+    border-radius: 8px;
+    color: #656d76;
+    font-size: 0.9em;
+  }
+  
+  .view-all-link {
+    color: #0969da;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0.5rem;
+  }
+  
+  .view-all-link:hover {
+    color: #0550ae;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .post-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .post-type-info {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+</style>

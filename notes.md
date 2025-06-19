@@ -109,7 +109,6 @@ permalink: /notes/
   }
   
   .category-name {
-    border-bottom: 2px solid #eaecef;
     padding-bottom: 10px;
     margin-bottom: 20px;
   }

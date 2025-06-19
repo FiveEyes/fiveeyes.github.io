@@ -9,12 +9,12 @@
   border-top: 3px solid $primary-color;
   border-bottom: 1px solid $border-color;
   background-color: $background-color;
-  min-height: 56px;
+  height: 60px;
   position: relative;
   
   .wrapper {
-    padding-top: ($spacing-unit / 3);
-    padding-bottom: ($spacing-unit / 3);
+    padding-top: ($spacing-unit / 4);
+    padding-bottom: ($spacing-unit / 4);
   }
   
   .header-content {
