@@ -1,18 +1,24 @@
---- 
 ---
+---
+
 
 @import "variables";
 @import "mixins";
 
 // 主页特定样式
 .home {
-  .page-heading {
+  .page-header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-top: ($spacing-unit / 2);
+    padding-bottom: ($spacing-unit / 2);
+  }
+  
+  .page-title {
     font-size: 2em; // Corresponds to h2 in _base.scss
     font-weight: $heading-font-weight;
-    margin-bottom: $spacing-unit;
+    margin-bottom: 0;
     color: $primary-color;
-    border-bottom: 2px solid $border-color;
-    padding-bottom: ($spacing-unit / 3);
   }
   
   .post-list-heading {

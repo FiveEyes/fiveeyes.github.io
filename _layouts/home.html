@@ -4,12 +4,15 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+    <header class="page-header">
+      <h1 class="page-title">{{ page.title | escape }}</h1>
+    </header>
   {%- endif -%}
 
-  {{ content }}
+  <div class="page-content">
+    {{ content }}
 
-  <!-- 合并所有内容类型 -->
+    <!-- 合并所有内容类型 -->
   {% assign all_posts = site.posts %}
   {% assign all_stories = site.stories %}
   {% assign all_notes = site.notes %}
@@ -95,6 +98,7 @@ layout: default
       </div>
     {%- endif -%}
   {%- endif -%}
+  </div>
 </div>
 
 <style>
