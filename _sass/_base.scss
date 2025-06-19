@@ -65,7 +65,7 @@ a {
 
 // Lists
 ul, ol {
-  margin-bottom: 1em;
+  margin-bottom: 0;
   padding-left: 1.5em;
 }
 
@@ -84,6 +84,10 @@ blockquote {
   margin-bottom: 1em;
   font-style: italic;
   color: $secondary-color;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Code blocks and inline code
