@@ -147,12 +147,16 @@
       
       // 列表
       ul, ol {
-        margin-bottom: 1.4em;
+        margin-bottom: 1.4em !important;
         padding-left: 1.5em;
-      }
-      
-      li {
-        margin-bottom: 0.5em;
+        
+        li {
+          margin-bottom: 0.5em;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
   }
