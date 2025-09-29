@@ -17,6 +17,8 @@ navigation_links:
     url: /notes/
   - title: 故事集
     url: /stories/
+  - title: Demos
+    url: /demos/
   - title: 碎碎念
     url: /moments/
   - title: 分类
@@ -52,6 +54,9 @@ collections:
   stories:
     output: true
     permalink: /stories/:path/
+  demos:
+    output: true
+    permalink: /demos/:path/
 
 # 博客文章URL路径设置
 defaults:
