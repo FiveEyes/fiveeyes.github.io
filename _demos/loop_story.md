@@ -99,7 +99,7 @@ permalink: /demos/loop_story
   <p style="font-size: 0.9em; color: #8b949e;">Provide the endpoint and key to your desired LLM to begin.</p>
   
   <label for="api-url">API Endpoint</label>
-  <input type="text" id="api-url" class="config-input" value="https://api.openai.com/v1/chat/completions">
+  <input type="text" id="api-url" class="config-input" value="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent">
   
   <label for="api-key">API Key</label>
   <input type="password" id="api-key" class="config-input" placeholder="Enter your secret key">
