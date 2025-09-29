@@ -164,7 +164,7 @@ permalink: /demos/loop_story
         const choice = choiceDefs[id];
         const choiceLink = document.createElement('a');
         choiceLink.classList.add('choice');
-        choiceLink.innerText = `> ${'''choice.text'''}`;
+        choiceLink.innerText = `> ${choice.text}`;
         choiceLink.href = "#";
         choiceLink.onclick = (e) => {
           e.preventDefault();
