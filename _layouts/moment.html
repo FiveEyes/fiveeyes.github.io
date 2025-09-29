@@ -1,61 +1,30 @@
 ---
-layout: default
+layout: base
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="bg-white rounded-lg shadow-md p-6 md:p-8 lg:p-10">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: "%Y-%m-%d %H:%M" }}
+  <header class="mb-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">{{ page.title | escape }}</h1>
+    <p class="text-gray-600">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y %H:%M" }}
       </time>
     </p>
   </header>
 
-  {% if page.tags.size > 0 %}
-    <div class="moment-tags">
-      {% for tag in page.tags %}
-        <span class="moment-tag">{{ tag }}</span>
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="prose prose-lg max-w-none mx-auto">
     {{ content }}
   </div>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+  {% if page.tags.size > 0 %}
+    <footer class="mt-8 pt-6 border-t border-gray-200">
+      <div class="flex flex-wrap items-center">
+        <span class="text-gray-700 font-semibold mr-3">Tags:</span>
+        {% for tag in page.tags %}
+          <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}" class="mr-2 mb-2 bg-gray-200 text-gray-700 text-sm font-medium px-2.5 py-0.5 rounded-full">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </footer>
+  {% endif %}
 
-<style>
-  .moment-tags {
-    margin-bottom: 20px;
-  }
-  
-  .moment-tag {
-    display: inline-block;
-    padding: 2px 8px;
-    font-size: 0.8em;
-    background-color: #f1f8ff;
-    color: #0366d6;
-    border-radius: 3px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .post-content {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-  
-  @media (max-width: 768px) {
-    .post-content {
-      font-size: 16px !important;
-      line-height: 1.5 !important;
-    }
-    
-    .post-content p {
-      margin-bottom: 1em;
-    }
-  }
-</style>
+</article>
