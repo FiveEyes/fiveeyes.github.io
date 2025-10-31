@@ -30,6 +30,17 @@ navigation_links:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: false
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
 theme: minima
 plugins:
   - jekyll-feed

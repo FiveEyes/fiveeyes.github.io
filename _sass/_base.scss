@@ -99,32 +99,7 @@ blockquote {
   }
 }
 
-// Code blocks and inline code
-code, pre {
-  font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
-  font-size: 0.9em;
-}
 
-code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  background-color: $code-bg-color;
-  border-radius: $base-border-radius;
-}
-
-pre {
-  padding: 1em;
-  overflow: auto;
-  background-color: $code-bg-color;
-  border-radius: $base-border-radius;
-  line-height: 1.45;
-
-  code {
-    padding: 0;
-    background-color: transparent;
-    border-radius: 0;
-  }
-}
 
 // Images
 img {
