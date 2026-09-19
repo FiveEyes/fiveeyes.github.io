@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" role="img" aria-labelledby="title desc">
+  <title id="title">两种等待命名的形状</title>
+  <desc id="desc">左侧 A 是圆润的不规则形状，右侧 B 是带有多个尖角的形状。图形用于解释布巴—奇奇效应，并非实验原始刺激材料。</desc>
+  <rect width="800" height="330" rx="20" fill="#f7f5f0"/>
+  <path d="M178 66 C206 42 245 56 252 84 C257 105 292 100 305 129 C320 163 292 179 281 197 C270 216 282 245 251 255 C220 266 207 242 184 248 C152 258 118 241 120 211 C122 183 89 176 97 144 C103 118 133 124 144 105 C151 90 158 80 178 66Z" fill="#b9cec9" stroke="#264c48" stroke-width="4"/>
+  <path d="M591 51 L609 113 L666 74 L642 133 L708 137 L652 167 L686 218 L627 199 L621 259 L590 215 L548 260 L553 200 L493 216 L535 173 L486 132 L552 136 L533 76 L576 117Z" fill="#b9cec9" stroke="#264c48" stroke-width="4" stroke-linejoin="miter"/>
+  <g fill="#264c48" font-family="Arial, sans-serif" font-size="24" text-anchor="middle">
+    <text x="200" y="301">A</text>
+    <text x="596" y="301">B</text>
+  </g>
+</svg>
