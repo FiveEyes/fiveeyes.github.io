@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<section class="archive-page">
+  <header class="page-heading"><p class="eyebrow">文集</p><h1>{{ page.title | escape }}</h1><p>{{ page.description | escape }}</p></header>
+  {% assign entries = site[page.collection_name] | sort: 'date' | reverse %}
+  {% if page.filter_categories %}
+    {% assign categories = entries | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+    {% assign single_categories = entries | map: 'category' | compact | uniq | sort %}
+    {% assign categories = categories | concat: single_categories | uniq | sort %}
+    <div class="category-filters" aria-label="按分类筛选" hidden>
+      <button type="button" data-filter="" aria-pressed="true">全部</button>
+      {% for category in categories %}{% if category != '' %}<button type="button" data-filter="{{ category | escape }}" aria-pressed="false">{{ category | escape }}</button>{% endif %}{% endfor %}
+    </div>
+  {% endif %}
+  <p class="archive-count" role="status" aria-live="polite">共 {{ entries.size }} 篇</p>
+  <div class="entry-list">{% for item in entries %}{% include entry.html item=item %}{% endfor %}</div>
+</section>

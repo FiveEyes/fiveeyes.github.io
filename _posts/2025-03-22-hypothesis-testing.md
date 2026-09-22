@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "从显著性检验、Neyman-Pearson 引理到贝叶斯方法，梳理三种统计检验思路。"
 title:  "统计假设检验入门：Fisher、Neyman-Pearson与贝叶斯方法"
 date:   2025-03-22 21:00:00 +0800
 categories: 统计学

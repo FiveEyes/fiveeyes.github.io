@@ -1,0 +1,7 @@
+{% assign item = include.item %}
+<article class="entry" data-categories="{{ item.categories | join: '|' | escape }}{% if item.category %}|{{ item.category | escape }}{% endif %}">
+  <div class="entry-meta"><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%Y.%m.%d' }}</time><span>{% case item.collection %}{% when 'stories' %}故事{% when 'notes' %}读书笔记{% when 'moments' %}碎碎念{% else %}文章{% endcase %}</span></div>
+  <h2 class="entry-title"><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h2>
+  <p class="entry-summary">{{ item.description | default: item.excerpt | default: item.content | strip_html | normalize_whitespace | truncate: 140 | escape }}</p>
+  {% if item.tags.size > 0 %}<div class="entry-tags" aria-label="标签">{% for tag in item.tags limit: 2 %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag | escape }}</a>{% endfor %}</div>{% endif %}
+</article>

@@ -1,4 +1,5 @@
 ---
+description: "博客的第一篇记录，从一个简单的 Python 示例开始。"
 layout: post
 title:  "欢迎来到我的博客"
 date:   2025-03-22 20:00:00 +0800

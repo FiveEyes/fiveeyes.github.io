@@ -1,5 +1,6 @@
 ---
 layout: post
+description: "喵喵妙妙塔的求解程序，包含行列提示、已知格子与求解结果示例。"
 title:  "喵喵妙妙塔求解器(Meow Tower Solver)"
 date:   2025-12-31 02:40:00 -0800
 categories: Puzzle
