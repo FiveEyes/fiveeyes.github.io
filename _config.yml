@@ -9,6 +9,9 @@ url: "https://freopen.com" # the base hostname & protocol for your site
 # Social settings
 github_username: fiveeyes
 
+# Google Analytics 4 (loaded only in production)
+google_analytics: G-DTY81JFK1X
+
 # 导航菜单配置
 navigation_links:
   - title: 首页
