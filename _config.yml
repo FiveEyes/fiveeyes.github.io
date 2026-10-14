@@ -24,6 +24,8 @@ navigation_links:
     url: /notes/
   - title: 碎碎念
     url: /moments/
+  - title: 实验室
+    url: /demos/
   - title: 关于
     url: /about/
 
@@ -89,3 +91,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - scripts/

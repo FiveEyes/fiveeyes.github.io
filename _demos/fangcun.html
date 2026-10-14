@@ -1,0 +1,83 @@
+---
+layout: null
+lang: zh-CN
+title: 方寸疑案 · 三个现场，三种真相
+description: 一款中文空间推理小游戏。在茶馆、夜市和夜行列车中，根据线索还原位置，解开三桩不同的疑案。
+permalink: /demos/fangcun/
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% include favicon.html %}
+  {% include google-analytics.html %}
+  <meta name="theme-color" content="#f4f0e7">
+  <link rel="stylesheet" href="{{ '/assets/games/fangcun/game.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script type="module" src="{{ '/assets/games/fangcun/game.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+</head>
+<body class="casebook">
+  <a class="skip-link" href="#investigation">跳到案件现场</a>
+  <header class="game-header">
+    <a class="brand-link" href="{{ '/demos/fangcun/' | relative_url }}" aria-label="方寸疑案首页">
+      <span class="brand-symbol" aria-hidden="true">方</span>
+      <span class="brand-name">方寸疑案<small>THE LITTLE CASEBOOK</small></span>
+    </a>
+    <nav class="header-links" aria-label="游戏导航">
+      <button type="button" id="help-button">玩法说明 <span aria-hidden="true">↗</span></button>
+      <a href="{{ '/demos/' | relative_url }}">返回博客 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="game-main" id="main-content">
+    <section class="hero" aria-labelledby="game-title">
+      <div><p class="eyebrow">一册小小的推理手记 · VOL. 01</p>
+        <h1 id="game-title">方寸之间，<span>真相有迹。</span></h1>
+        <p>循着线索，安放每一个人。让散落的位置，拼出故事的答案。</p>
+      </div>
+      <div class="hero-meta"><span>03 <small>独立案件</small></span><span>06 × 06 <small>方格现场</small></span><span id="total-progress">00 / 03 <small>已结案</small></span></div>
+    </section>
+    <nav class="case-selector" id="case-selector" aria-label="选择案件"></nav>
+    <section id="investigation" tabindex="-1" aria-labelledby="case-title">
+      <header class="case-brief">
+        <div><p class="eyebrow" id="case-kicker"></p><h2 id="case-title"></h2><p id="case-intro"></p></div>
+        <span class="mission-tag" id="case-mission"></span>
+      </header>
+      <p class="mission-note" id="objective-rule"></p>
+      <div class="rule-strip"><span>现场规则</span><p>每行、每列各一人 · 所有线索都是真的 · 先还原位置，再回答案件问题</p><button type="button" data-action="help" aria-label="查看详细规则">?</button></div>
+      <div class="workspace">
+        <section class="board-panel" aria-labelledby="board-title">
+          <div class="panel-heading"><div><p class="section-kicker">01 / 还原现场</p><h3 id="board-title">现场平面图</h3></div><span class="subtle">北 ↑</span></div>
+          <div class="mobile-people"><div class="person-picker" id="person-picker" role="group" aria-label="快速选择人物"></div><p id="mobile-clue"></p></div>
+          <div class="board-wrap">
+            <div class="column-labels" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+            <div class="map-body"><div class="row-labels" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div><div class="board" id="board" role="group" aria-label="案件现场，6 行 6 列"></div></div>
+          </div>
+          <div class="room-legend" id="room-legend"></div>
+          <div class="board-tools">
+            <div class="mode-switch" role="group" aria-label="操作模式"><button type="button" data-mode="place" class="is-active" aria-pressed="true">放置</button><button type="button" data-mode="note" aria-pressed="false">笔记</button><button type="button" data-mode="exclude" aria-pressed="false">排除 ×</button><button type="button" data-mode="erase" aria-pressed="false">擦除</button></div>
+            <button type="button" class="tool-button" id="undo-button" disabled>↶ 撤销</button>
+            <button type="button" class="tool-button" id="reset-button">重来</button>
+          </div>
+          <p class="board-caption" id="board-caption">先选人物，再点格子。家具上的小字说明物件；虚线 × 表示同行或同列已有人。</p>
+        </section>
+        <section class="clue-panel" aria-labelledby="clue-title">
+          <div class="panel-heading"><div><p class="section-kicker">02 / 比对线索</p><h3 id="clue-title">在场的人</h3></div><span class="subtle" id="placed-count">0 / 6 已就位</span></div>
+          <div class="people-list" id="people-list"></div>
+          <div class="selected-person" id="selected-person"></div>
+        </section>
+      </div>
+      <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      <section class="hint-panel" id="hint-panel" aria-label="推理提示" hidden></section>
+      <div class="action-bar">
+        <div class="progress-info"><span id="progress-label">还原 0 / 6 人的位置</span><div class="progress-track" aria-hidden="true"><i id="progress-fill"></i></div><small id="save-status">进度自动保存在当前浏览器</small></div>
+        <button type="button" class="secondary-button" id="hint-button">给我一点提示</button>
+        <button type="button" class="primary-button" id="check-button">核对现场 <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+    <noscript><p>这份互动手记需要 JavaScript。请启用后刷新，即可免费游玩全部三个案件。</p></noscript>
+  </main>
+  <footer class="game-footer"><span>方寸疑案 · 原创场景与案件</span><span>慢慢想，真相不会跑掉。</span><a href="https://murdoku.com/" target="_blank" rel="noopener noreferrer">玩法灵感：Murdoku ↗</a></footer>
+  <dialog class="game-dialog" id="game-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><p class="section-kicker" id="dialog-kicker"></p><button type="button" class="dialog-close" id="dialog-close" aria-label="关闭弹窗">×</button></div><div class="dialog-body" id="dialog-body"></div></dialog>
+</body>
+</html>
